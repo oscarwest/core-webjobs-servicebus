@@ -21,7 +21,8 @@ namespace Microsoft.Azure.WebJobs.ServiceBus
         /// </summary>
         public ServiceBusConfiguration()
         {
-            MessageOptions = new MessageHandlerOptions
+            // TODO: null?
+            MessageOptions = new MessageHandlerOptions((ExceptionReceivedEventArgs) => null)
             {
                 MaxConcurrentCalls = 16
             };

@@ -62,11 +62,19 @@ namespace Microsoft.Azure.WebJobs.ServiceBus
             }
 
             // TODO: FACAVAL - Create receiver, can't rely on the factory anymore
-            //MessageReceiver receiver =  factory.CreateMessageReceiver(entityPath);
-            //receiver.PrefetchCount = _config.PrefetchCount;
-            //return receiver;
+            // MessageReceiver receiver =  factory.CreateMessageReceiver(entityPath);
+            // receiver.PrefetchCount = _config.PrefetchCount;
+            // return receiver;
 
-            return null;
+            MessageReceiver receiver = new MessageReceiver(
+                connectionString: _config.ConnectionString,
+                entityPath: entityPath,
+                receiveMode: ReceiveMode.PeekLock,
+                retryPolicy: null,
+                prefetchCount: _config.PrefetchCount
+            );
+
+            return receiver;
         }
 
         /// <summary>
