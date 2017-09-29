@@ -1,11 +1,11 @@
 ﻿// Copyright (c) .NET Foundation. All rights reserved.
 // Licensed under the MIT License. See License.txt in the project root for license information.
 
+using System.Threading;
 using System.Threading.Tasks;
 using Microsoft.Azure.WebJobs.Host.Listeners;
-using System.Threading;
 
-namespace Microsoft.Azure.WebJobs.ServiceBus.Listeners
+namespace Core.Library.Listeners
 {
     /// <summary>
     /// Interface defining methods used to create <see cref="IListener"/>s for

@@ -2,13 +2,14 @@
 // Licensed under the MIT License. See License.txt in the project root for license information.
 
 using System;
-using System.Collections.Concurrent;
 using System.Globalization;
-using Microsoft.Azure.WebJobs.Host;
+using Core.Library.Config;
 using Microsoft.Azure.ServiceBus;
 using Microsoft.Azure.ServiceBus.Core;
+using Microsoft.Azure.WebJobs;
+using Microsoft.Azure.WebJobs.Host;
 
-namespace Microsoft.Azure.WebJobs.ServiceBus
+namespace Core.Library
 {
     /// <summary>
     /// This class provides factory methods for the creation of instances

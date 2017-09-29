@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 using Microsoft.Azure.WebJobs.Host.Executors;
 using Microsoft.Azure.ServiceBus;
 
-namespace Microsoft.Azure.WebJobs.ServiceBus
+namespace Core.Library
 {
     /// <summary>
     /// This class defines a strategy used for processing ServiceBus messages.

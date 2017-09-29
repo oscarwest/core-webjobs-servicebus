@@ -3,14 +3,13 @@
 
 using System;
 using System.Globalization;
-using System.IO;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
-using Microsoft.Azure.WebJobs.Host.Bindings;
 using Microsoft.Azure.ServiceBus;
+using Microsoft.Azure.WebJobs.Host.Bindings;
 
-namespace Microsoft.Azure.WebJobs.ServiceBus.Triggers
+namespace Core.Library.Triggers
 {
     internal class BrokeredMessageValueProvider : IValueProvider
     {
@@ -67,8 +66,7 @@ namespace Microsoft.Azure.WebJobs.ServiceBus.Triggers
             }
         }
 
-        private static async Task<string> GetBase64StringAsync(Message clonedMessage,
-            CancellationToken cancellationToken)
+        private static async Task<string> GetBase64StringAsync(Message clonedMessage, CancellationToken cancellationToken)
         {
             return Convert.ToBase64String(clonedMessage.Body);
         }

@@ -5,13 +5,13 @@ using System;
 using System.Globalization;
 using System.Reflection;
 using System.Threading.Tasks;
-using Microsoft.Azure.WebJobs.Host;
-using Microsoft.Azure.WebJobs.Host.Converters;
-using Microsoft.Azure.WebJobs.Host.Triggers;
+using Core.Library.Config;
 using Microsoft.Azure.ServiceBus;
+using Microsoft.Azure.WebJobs;
+using Microsoft.Azure.WebJobs.Host;
+using Microsoft.Azure.WebJobs.Host.Triggers;
 
-
-namespace Microsoft.Azure.WebJobs.ServiceBus.Triggers
+namespace Core.Library.Triggers
 {
     internal class ServiceBusTriggerAttributeBindingProvider : ITriggerBindingProvider
     {

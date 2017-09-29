@@ -3,10 +3,10 @@
 
 using System;
 using System.Diagnostics;
+using Microsoft.Azure.WebJobs;
 using Microsoft.Azure.WebJobs.Description;
-using Microsoft.Azure.ServiceBus;
 
-namespace Microsoft.Azure.WebJobs
+namespace Core.Library
 {
     /// <summary>
     /// Attribute used to bind a parameter to a ServiceBus Queue message, causing the function to run when a

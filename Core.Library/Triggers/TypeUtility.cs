@@ -1,7 +1,8 @@
 using System;
 using System.Reflection;
+using Microsoft.Azure.WebJobs;
 
-namespace Microsoft.Azure.WebJobs.ServiceBus.Triggers
+namespace Core.Library.Triggers
 {
 
     // Copyright (c) .NET Foundation. All rights reserved.

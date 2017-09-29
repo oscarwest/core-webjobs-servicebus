@@ -2,8 +2,9 @@
 // Licensed under the MIT License. See License.txt in the project root for license information.
 
 using System;
+using Microsoft.Azure.WebJobs;
 
-namespace Microsoft.Azure.WebJobs
+namespace Core.Library
 {
     /// <summary>
     /// Attribute used to override the default ServiceBus account used by triggers and binders.

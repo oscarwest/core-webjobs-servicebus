@@ -3,11 +3,11 @@
 
 using System.Threading;
 using System.Threading.Tasks;
+using Core.Library.Config;
 using Microsoft.Azure.WebJobs.Host.Executors;
 using Microsoft.Azure.WebJobs.Host.Listeners;
-using Microsoft.Azure.ServiceBus;
 
-namespace Microsoft.Azure.WebJobs.ServiceBus.Listeners
+namespace Core.Library.Listeners
 {
     internal class ServiceBusSubscriptionListenerFactory : IListenerFactory
     {

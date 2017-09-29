@@ -2,13 +2,13 @@
 // Licensed under the MIT License. See License.txt in the project root for license information.
 
 using System;
+using Core.Library.Triggers;
+using Microsoft.Azure.WebJobs;
 using Microsoft.Azure.WebJobs.Host;
-using Microsoft.Azure.WebJobs.Host.Bindings;
 using Microsoft.Azure.WebJobs.Host.Config;
 using Microsoft.Azure.WebJobs.Host.Triggers;
-using Microsoft.Azure.WebJobs.ServiceBus.Triggers;
 
-namespace Microsoft.Azure.WebJobs.ServiceBus.Config
+namespace Core.Library.Config
 {
     /// <summary>
     /// Extension configuration provider used to register ServiceBus triggers and binders

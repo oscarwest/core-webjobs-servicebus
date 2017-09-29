@@ -2,9 +2,8 @@
 // Licensed under the MIT License. See License.txt in the project root for license information.
 
 using System;
-using Microsoft.Azure.ServiceBus;
 
-namespace Microsoft.Azure.WebJobs.ServiceBus
+namespace Core.Library
 {
     internal static class ServiceBusClient
     {

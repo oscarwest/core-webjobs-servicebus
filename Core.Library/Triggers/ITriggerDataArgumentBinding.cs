@@ -1,11 +1,10 @@
-﻿using Microsoft.Azure.WebJobs.Host.Bindings;
-using Microsoft.Azure.WebJobs.Host.Triggers;
-using System;
+﻿using System;
 using System.Collections.Generic;
-using System.Text;
 using System.Threading.Tasks;
+using Microsoft.Azure.WebJobs.Host.Bindings;
+using Microsoft.Azure.WebJobs.Host.Triggers;
 
-namespace Microsoft.Azure.WebJobs.ServiceBus.Triggers
+namespace Core.Library.Triggers
 {
     /// <summary>
     /// Interface providing the capability to bind to trigger parameter values.

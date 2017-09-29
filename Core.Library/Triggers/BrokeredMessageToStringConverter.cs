@@ -4,13 +4,15 @@
 using System;
 using System.Globalization;
 using System.IO;
+using System.Runtime.Serialization;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using Microsoft.Azure.ServiceBus;
 using Microsoft.Azure.ServiceBus.InteropExtensions;
+using Microsoft.Azure.WebJobs;
 
-namespace Microsoft.Azure.WebJobs.ServiceBus.Triggers
+namespace Core.Library.Triggers
 {
     internal class BrokeredMessageToStringConverter : IAsyncConverter<Message, string>
     {
@@ -20,23 +22,29 @@ namespace Microsoft.Azure.WebJobs.ServiceBus.Triggers
             {
                 throw new ArgumentNullException("input");
             }
-            Stream stream = input.GetBody<Stream>();
-            if (stream == null)
-            {
-                return null;
-            }
 
-            TextReader reader = new StreamReader(stream, Encoding.UTF8);
+            Stream stream = null;
+            TextReader reader= null;
             try
             {
                 cancellationToken.ThrowIfCancellationRequested();
                 try
                 {
+                    stream = input.GetBody<Stream>();
+                    reader = new StreamReader(stream, Encoding.UTF8);
+                    if (stream == null)
+                    {
+                        return null;
+                    }
                     return await reader.ReadToEndAsync();
                 }
                 catch (DecoderFallbackException)
                 {
                     // we'll try again below
+                }
+                catch (SerializationException)
+                {
+                    // message is not a stream
                 }
 
                 // We may get here if the message is a string yet was DataContract-serialized when created. We'll

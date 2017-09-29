@@ -5,20 +5,19 @@ using System;
 using System.Collections.Generic;
 using System.Globalization;
 using System.Threading.Tasks;
+using Core.Library.Config;
+using Core.Library.Listeners;
+using Microsoft.Azure.ServiceBus;
 using Microsoft.Azure.WebJobs.Host.Bindings;
-using Microsoft.Azure.WebJobs.Host.Converters;
 using Microsoft.Azure.WebJobs.Host.Listeners;
 using Microsoft.Azure.WebJobs.Host.Protocols;
 using Microsoft.Azure.WebJobs.Host.Triggers;
-using Microsoft.Azure.WebJobs.ServiceBus.Listeners;
-using Microsoft.Azure.ServiceBus;
 
-namespace Microsoft.Azure.WebJobs.ServiceBus.Triggers
+namespace Core.Library.Triggers
 {
     internal class ServiceBusTriggerBinding : ITriggerBinding
     {
         private readonly string _parameterName;
-        private readonly IObjectToTypeConverter<Message> _converter;
         private readonly ITriggerDataArgumentBinding<Message> _argumentBinding;
         private readonly IReadOnlyDictionary<string, Type> _bindingDataContract;
         private readonly string _namespaceName;
@@ -92,10 +91,10 @@ namespace Microsoft.Azure.WebJobs.ServiceBus.Triggers
         public async Task<ITriggerData> BindAsync(object value, ValueBindingContext context)
         {
             Message message = value as Message;
-            if (message == null && !_converter.TryConvert(value, out message))
-            {
-                throw new InvalidOperationException("Unable to convert trigger to BrokeredMessage.");
-            }
+            //if (message == null && !_converter.TryConvert(value, out message))
+            //{
+            //    throw new InvalidOperationException("Unable to convert trigger to BrokeredMessage.");
+            //}
 
             ITriggerData triggerData = await _argumentBinding.BindAsync(message, context);
             IReadOnlyDictionary<string, object> bindingData = CreateBindingData(message, triggerData.BindingData);
@@ -126,7 +125,7 @@ namespace Microsoft.Azure.WebJobs.ServiceBus.Triggers
         {
             var contract = new Dictionary<string, Type>(StringComparer.OrdinalIgnoreCase);
             contract.Add("DeliveryCount", typeof(int));
-            contract.Add("DeadLetterSource", typeof(string));
+            //contract.Add("DeadLetterSource", typeof(string));
             contract.Add("ExpiresAtUtc", typeof(DateTime));
             contract.Add("EnqueuedTimeUtc", typeof(DateTime));
             contract.Add("MessageId", typeof(string));

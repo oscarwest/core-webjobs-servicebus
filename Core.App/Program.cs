@@ -1,6 +1,8 @@
 ﻿using System;
+using System.IO;
+using Core.Library.Config;
 using Microsoft.Azure.WebJobs;
-using Microsoft.Azure.WebJobs.ServiceBus;
+using Microsoft.Extensions.Configuration;
 
 namespace Core.App
 {
@@ -8,17 +10,24 @@ namespace Core.App
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
-            
+            var builder = new ConfigurationBuilder()
+                .SetBasePath(Directory.GetCurrentDirectory())
+                .AddJsonFile("appsettings.json")
+                .AddEnvironmentVariables();
 
-            JobHostConfiguration config = new JobHostConfiguration(storageConnectionString);
+            var configuration = builder.Build();
+
+            JobHostConfiguration config = new JobHostConfiguration();
             ServiceBusConfiguration servicebusConfig = new ServiceBusConfiguration()
             {
-                ConnectionString = serviceBusConnectionString,
+                ConnectionString = configuration.GetSection("connectionstrings:Servicebus").Value,
                 PrefetchCount = 16
             };
 
             config.UseServiceBus(servicebusConfig);
+            config.DashboardConnectionString = configuration.GetSection("connectionstrings:AzureWebJobsDashboard").Value;
+            config.StorageConnectionString = configuration.GetSection("connectionstrings:AzureWebJobsStorage").Value;
+
             JobHost host = new JobHost(config);
             host.RunAndBlock();
         }

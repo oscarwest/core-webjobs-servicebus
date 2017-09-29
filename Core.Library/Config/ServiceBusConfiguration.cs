@@ -2,10 +2,11 @@
 // Licensed under the MIT License. See License.txt in the project root for license information.
 
 using System;
-using Microsoft.Azure.WebJobs.Host;
 using Microsoft.Azure.ServiceBus;
+using Microsoft.Azure.WebJobs;
+using Microsoft.Azure.WebJobs.Host;
 
-namespace Microsoft.Azure.WebJobs.ServiceBus
+namespace Core.Library.Config
 {
     /// <summary>
     /// Configuration options for the ServiceBus extension.
