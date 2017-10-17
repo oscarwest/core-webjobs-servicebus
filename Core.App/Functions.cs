@@ -1,6 +1,5 @@
 using System.IO;
-using Core.Library;
-using Microsoft.Azure.WebJobs;
+using Azure.WebJobs.Sdk.Core;
 
 namespace Core.App
 {

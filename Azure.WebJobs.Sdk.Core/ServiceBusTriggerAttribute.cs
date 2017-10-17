@@ -6,7 +6,7 @@ using System.Diagnostics;
 using Microsoft.Azure.WebJobs;
 using Microsoft.Azure.WebJobs.Description;
 
-namespace Core.Library
+namespace Azure.WebJobs.Sdk.Core
 {
     /// <summary>
     /// Attribute used to bind a parameter to a ServiceBus Queue message, causing the function to run when a

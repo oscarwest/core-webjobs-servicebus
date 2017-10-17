@@ -4,7 +4,7 @@
 using System.Reflection;
 using Microsoft.Azure.ServiceBus;
 
-namespace Core.Library.Triggers
+namespace Azure.WebJobs.Sdk.Core.Triggers
 {
     internal interface IQueueTriggerArgumentBindingProvider
     {

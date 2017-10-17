@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<package>
+  <metadata>
+    <id>Azure.WebJobs.Sdk.Core</id>
+    <version>1.0</version>
+    <title>Azure.WebJobs.Sdk.Core</title>
+    <authors>Oscar West, Michael Hultman</authors>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Azure WebJobs SDK port from net452 to Core. Only includes the ServiceBus topic trigger.</description>
+    <releaseNotes>First release</releaseNotes>
+    <copyright>Copyright 2017</copyright>
+    <tags>Webjobs</tags>
+  </metadata>
+  <files>
+    <file src="Publish\Library\**" target="" /><!-- Matches teamcity dotnet publish output dir -->
+  </files>
+</package>

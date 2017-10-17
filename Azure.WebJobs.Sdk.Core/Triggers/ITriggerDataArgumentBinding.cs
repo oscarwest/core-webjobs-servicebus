@@ -4,7 +4,7 @@ using System.Threading.Tasks;
 using Microsoft.Azure.WebJobs.Host.Bindings;
 using Microsoft.Azure.WebJobs.Host.Triggers;
 
-namespace Core.Library.Triggers
+namespace Azure.WebJobs.Sdk.Core.Triggers
 {
     /// <summary>
     /// Interface providing the capability to bind to trigger parameter values.

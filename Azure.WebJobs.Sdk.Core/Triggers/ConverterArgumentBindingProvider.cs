@@ -10,7 +10,7 @@ using Microsoft.Azure.WebJobs;
 using Microsoft.Azure.WebJobs.Host.Bindings;
 using Microsoft.Azure.WebJobs.Host.Triggers;
 
-namespace Core.Library.Triggers
+namespace Azure.WebJobs.Sdk.Core.Triggers
 {
     internal class ConverterArgumentBindingProvider<T> : IQueueTriggerArgumentBindingProvider
     {

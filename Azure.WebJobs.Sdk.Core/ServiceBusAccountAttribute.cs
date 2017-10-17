@@ -4,7 +4,7 @@
 using System;
 using Microsoft.Azure.WebJobs;
 
-namespace Core.Library
+namespace Azure.WebJobs.Sdk.Core
 {
     /// <summary>
     /// Attribute used to override the default ServiceBus account used by triggers and binders.

@@ -5,7 +5,7 @@ using System.Collections.Generic;
 using System.Globalization;
 using Microsoft.Azure.WebJobs.Host.Protocols;
 
-namespace Core.Library.Triggers
+namespace Azure.WebJobs.Sdk.Core.Triggers
 {
     internal class ServiceBusTriggerParameterDescriptor : TriggerParameterDescriptor
     {

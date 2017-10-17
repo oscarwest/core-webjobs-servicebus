@@ -3,33 +3,29 @@
 
 using System.Threading;
 using System.Threading.Tasks;
-using Core.Library.Config;
+using Azure.WebJobs.Sdk.Core.Config;
 using Microsoft.Azure.WebJobs.Host.Executors;
 using Microsoft.Azure.WebJobs.Host.Listeners;
 
-namespace Core.Library.Listeners
+namespace Azure.WebJobs.Sdk.Core.Listeners
 {
-    internal class ServiceBusSubscriptionListenerFactory : IListenerFactory
+    internal class ServiceBusQueueListenerFactory : IListenerFactory
     {
-        private readonly string _topicName;
-        private readonly string _subscriptionName;
+        private readonly string _queueName;
         private readonly ITriggeredFunctionExecutor _executor;
         private readonly ServiceBusConfiguration _config;
 
-        public ServiceBusSubscriptionListenerFactory(string topicName, string subscriptionName, ITriggeredFunctionExecutor executor, ServiceBusConfiguration config)
+        public ServiceBusQueueListenerFactory(string queueName, ITriggeredFunctionExecutor executor, ServiceBusConfiguration config)
         {
-            _topicName = topicName;
-            _subscriptionName = subscriptionName;
+            _queueName = queueName;
             _executor = executor;
             _config = config;
         }
 
         public async Task<IListener> CreateAsync(CancellationToken cancellationToken)
         {
-            string entityPath = $"{_topicName}/Subscriptions/{_subscriptionName}";
-
             ServiceBusTriggerExecutor triggerExecutor = new ServiceBusTriggerExecutor(_executor);
-            return new ServiceBusListener(entityPath, triggerExecutor, _config);
+            return new ServiceBusListener(_queueName, triggerExecutor, _config);
         }
     }
 }

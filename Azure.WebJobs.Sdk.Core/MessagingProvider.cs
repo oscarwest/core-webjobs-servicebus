@@ -3,13 +3,13 @@
 
 using System;
 using System.Globalization;
-using Core.Library.Config;
+using Azure.WebJobs.Sdk.Core.Config;
 using Microsoft.Azure.ServiceBus;
 using Microsoft.Azure.ServiceBus.Core;
 using Microsoft.Azure.WebJobs;
 using Microsoft.Azure.WebJobs.Host;
 
-namespace Core.Library
+namespace Azure.WebJobs.Sdk.Core
 {
     /// <summary>
     /// This class provides factory methods for the creation of instances

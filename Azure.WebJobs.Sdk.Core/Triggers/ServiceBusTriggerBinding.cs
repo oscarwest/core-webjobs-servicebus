@@ -5,15 +5,15 @@ using System;
 using System.Collections.Generic;
 using System.Globalization;
 using System.Threading.Tasks;
-using Core.Library.Config;
-using Core.Library.Listeners;
+using Azure.WebJobs.Sdk.Core.Config;
+using Azure.WebJobs.Sdk.Core.Listeners;
 using Microsoft.Azure.ServiceBus;
 using Microsoft.Azure.WebJobs.Host.Bindings;
 using Microsoft.Azure.WebJobs.Host.Listeners;
 using Microsoft.Azure.WebJobs.Host.Protocols;
 using Microsoft.Azure.WebJobs.Host.Triggers;
 
-namespace Core.Library.Triggers
+namespace Azure.WebJobs.Sdk.Core.Triggers
 {
     internal class ServiceBusTriggerBinding : ITriggerBinding
     {

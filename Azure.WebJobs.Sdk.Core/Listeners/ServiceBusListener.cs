@@ -5,13 +5,13 @@ using System;
 using System.Diagnostics.CodeAnalysis;
 using System.Threading;
 using System.Threading.Tasks;
-using Core.Library.Config;
+using Azure.WebJobs.Sdk.Core.Config;
 using Microsoft.Azure.ServiceBus;
 using Microsoft.Azure.ServiceBus.Core;
 using Microsoft.Azure.WebJobs.Host.Executors;
 using Microsoft.Azure.WebJobs.Host.Listeners;
 
-namespace Core.Library.Listeners
+namespace Azure.WebJobs.Sdk.Core.Listeners
 {
     internal sealed class ServiceBusListener : IListener
     {

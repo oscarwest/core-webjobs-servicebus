@@ -6,7 +6,7 @@ using Microsoft.Azure.ServiceBus;
 using Microsoft.Azure.WebJobs;
 using Microsoft.Azure.WebJobs.Host;
 
-namespace Core.Library.Config
+namespace Azure.WebJobs.Sdk.Core.Config
 {
     /// <summary>
     /// Configuration options for the ServiceBus extension.

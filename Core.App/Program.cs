@@ -1,6 +1,6 @@
 ﻿using System;
 using System.IO;
-using Core.Library.Config;
+using Azure.WebJobs.Sdk.Core.Config;
 using Microsoft.Azure.WebJobs;
 using Microsoft.Extensions.Configuration;
 

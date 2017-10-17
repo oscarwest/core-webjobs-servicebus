@@ -4,7 +4,7 @@
 using System;
 using Microsoft.Azure.ServiceBus;
 
-namespace Core.Library.Listeners
+namespace Azure.WebJobs.Sdk.Core.Listeners
 {
     internal static class ServiceBusCausalityHelper
     {

@@ -2,7 +2,7 @@ using System;
 using System.Reflection;
 using Microsoft.Azure.WebJobs;
 
-namespace Core.Library.Triggers
+namespace Azure.WebJobs.Sdk.Core.Triggers
 {
 
     // Copyright (c) .NET Foundation. All rights reserved.

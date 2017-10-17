@@ -5,7 +5,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using Microsoft.Azure.WebJobs.Host.Listeners;
 
-namespace Core.Library.Listeners
+namespace Azure.WebJobs.Sdk.Core.Listeners
 {
     /// <summary>
     /// Interface defining methods used to create <see cref="IListener"/>s for

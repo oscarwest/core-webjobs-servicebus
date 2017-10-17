@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 using Microsoft.Azure.ServiceBus;
 using Microsoft.Azure.WebJobs.Host.Executors;
 
-namespace Core.Library.Listeners
+namespace Azure.WebJobs.Sdk.Core.Listeners
 {
     internal class ServiceBusTriggerExecutor
     {

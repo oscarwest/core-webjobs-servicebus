@@ -12,7 +12,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Core.Library\Core.Library.csproj" />
+    <ProjectReference Include="..\Azure.WebJobs.Sdk.Core\Azure.WebJobs.Sdk.Core.csproj" />
   </ItemGroup>
 
 </Project>

@@ -12,7 +12,7 @@ using Microsoft.Azure.ServiceBus;
 using Microsoft.Azure.ServiceBus.InteropExtensions;
 using Microsoft.Azure.WebJobs;
 
-namespace Core.Library.Triggers
+namespace Azure.WebJobs.Sdk.Core.Triggers
 {
     internal class BrokeredMessageToStringConverter : IAsyncConverter<Message, string>
     {

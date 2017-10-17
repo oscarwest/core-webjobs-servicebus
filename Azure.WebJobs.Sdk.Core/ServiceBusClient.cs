@@ -3,7 +3,7 @@
 
 using System;
 
-namespace Core.Library
+namespace Azure.WebJobs.Sdk.Core
 {
     internal static class ServiceBusClient
     {

@@ -4,7 +4,7 @@ VisualStudioVersion = 15.0.26730.15
 MinimumVisualStudioVersion = 15.0.26124.0
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Core.App", "Core.App\Core.App.csproj", "{A13C383B-0B03-40E6-A6B9-F1E83B99D6E9}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Core.Library", "Core.Library\Core.Library.csproj", "{80B23A48-50C0-4981-A2CE-88EDD30C49B6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Azure.WebJobs.Sdk.Core", "Azure.WebJobs.Sdk.Core\Azure.WebJobs.Sdk.Core.csproj", "{80B23A48-50C0-4981-A2CE-88EDD30C49B6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

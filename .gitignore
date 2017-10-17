@@ -198,3 +198,4 @@ Collector\.Felicia\.Api/Properties/PublishProfiles/
 # Stuff
 bin
 obj
+.nuspec
